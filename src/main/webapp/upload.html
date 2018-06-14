@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload form</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-WuViQmTamrPyvMFZjf8te7HpKtdxuzV/HX1yG26a0d8yieIBr+beDf1ME99iX1cM" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>CSV Batchee Demo</h1>
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" />
+            </div>
+            <div class="form-group">
+                <label for="file">File</label>
+                <input type="file" name="file" id="file"/>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </body>
+</html>

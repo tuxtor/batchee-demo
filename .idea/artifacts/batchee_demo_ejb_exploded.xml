@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="batchee-demo:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/batchee_demo_ejb_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="batchee-demo/ejb/EJB" />
+      <element id="module-output" name="batchee-demo" />
+    </root>
+  </artifact>
+</component>

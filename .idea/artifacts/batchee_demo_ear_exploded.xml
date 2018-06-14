@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="batchee-demo:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/batchee_demo_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="batchee-demo/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="ejb.jar">
+        <element id="artifact" artifact-name="batchee-demo:ejb exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>
