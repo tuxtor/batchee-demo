@@ -13,6 +13,11 @@ import javax.persistence.Table;
 @Table(name="movie")
 public class Movie implements Serializable {
 
+	@Override
+	public String toString() {
+		return "Movie [name=" + name + ", releaseYear=" + releaseYear + "]";
+	}
+
 	private static final long serialVersionUID = 1L;
 
     @Id

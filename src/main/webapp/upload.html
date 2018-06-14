@@ -19,5 +19,43 @@
 
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
+        
+        <hr/>
+        
+        <form id="queryjob">
+            <div class="form-group">
+                <label for="description">Job number</label>
+                <input type="text" id="jobnum" name="jobnum" />
+            </div>
+
+            <button id="status-btn" class="btn btn-default">Get Job status</button>
+            
+        </form>
+        <p id="status"></p>
+        
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+    
+		function queryJob(){
+			var jobId = $( "#jobnum" ).val();
+
+			$.ajax({
+			    url: "UploadStatusServlet",
+			    data: {"batchid": jobId},
+			    success: function(data) {
+			    	$( "#status" ).html( data );
+			    },
+			    error: function(xhr) {
+			    	$( "#status" ).html( xhr );
+			    }
+			});
+		}
+
+		$("#queryjob").submit(function(e){
+	        e.preventDefault();
+	        queryJob();
+	    });
+
+    </script>
 </html>
