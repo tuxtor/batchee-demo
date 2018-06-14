@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.deltaspike.modules:deltaspike-partial-bean-module-impl:1.8.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/deltaspike/modules/deltaspike-partial-bean-module-impl/1.8.2/deltaspike-partial-bean-module-impl-1.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/deltaspike/modules/deltaspike-partial-bean-module-impl/1.8.2/deltaspike-partial-bean-module-impl-1.8.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/deltaspike/modules/deltaspike-partial-bean-module-impl/1.8.2/deltaspike-partial-bean-module-impl-1.8.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
