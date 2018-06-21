@@ -7,14 +7,17 @@ import java.util.logging.Logger;
 import javax.batch.api.chunk.AbstractItemWriter;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+
+import org.apache.deltaspike.jpa.api.transaction.Transactional;
+
+import com.nabenik.controller.MovieRepository;
+import com.nabenik.model.Movie;
 
 @Named
 public class MovieItemWriter extends AbstractItemWriter {
 
-	@PersistenceContext
-    EntityManager em;
+	@Inject
+    MovieRepository movieService;
 	
 	@Inject
 	Logger logger;
@@ -22,8 +25,8 @@ public class MovieItemWriter extends AbstractItemWriter {
     public void writeItems(List list) throws Exception {
         for (Object obj : list) {
         	logger.log(Level.INFO, "Writing " + obj);
-            em.persist(obj);
+            movieService.save((Movie)obj);
         }
-        em.flush();
     }
 }
+

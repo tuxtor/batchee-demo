@@ -1,10 +1,16 @@
 package com.nabenik.controller;
 
-import org.apache.deltaspike.data.api.EntityRepository;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+import org.apache.deltaspike.data.api.AbstractEntityRepository;
 import org.apache.deltaspike.data.api.Repository;
 
 import com.nabenik.model.Movie;
 
 @Repository(forEntity = Movie.class)
-public interface MovieRepository extends EntityRepository<Movie, Long> {
+public abstract class MovieRepository extends AbstractEntityRepository<Movie, Long> {
+	
+	@Inject
+    public EntityManager em;
 }
